@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
+    <link rel="icon" href="./img/findy-logo.png" sizes="8x8">
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./mainphoto.css">
     <link rel="stylesheet" href="./mainicon.css">

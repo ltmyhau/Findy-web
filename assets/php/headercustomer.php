@@ -9,7 +9,7 @@
                 <nav class="navbar">
                     <div class="navbar__logo">
                         <a href="./customersignin.php" class="navbar__logo-link">
-                            <img src="./img/findy-logo-1.jpg" alt="Findy" class="navbar__logo-img">
+                            <img src="./img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img">
                         </a>
                     </div>
                     <div class="navbar__heading">

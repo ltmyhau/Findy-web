@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findy</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="post-job.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="grid wide">
+
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <div class="navbar__logo">
+                        <a href="" class="navbar__logo-link">
+                            <img src="./assets/img/findy-logo-2.png" alt="Findy" class="navbar__logo-img">
+                        </a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./find-freelancer.html" class="navbar__heading-link">Thuê Thợ</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="" class="navbar__heading-link">Tìm việc</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./post-job.html" class="navbar__heading-link">Đăng tin</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./post-management.html" class="navbar__heading-link">Quản lý bài đăng</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./order-management.html" class="navbar__heading-link">Đơn hàng</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./account.html" class="navbar__heading-link">[Tên người dùng]</a>
+                    </div>
+                    <!-- <div class="navbar__heading">
+                        <a href="" class="navbar__heading-link">Đăng ký</a>
+                    </div> -->
+                    <div class="navbar__heading">
+                        <i class="navbar__heading-icon fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="grid wide">
+                <div class="row content">
+                    <div class="col l-12 m-12 c-12">
+                        <div class="post-job">
+                            <h1 class="post-job__heading">Tạo bài đăng</h1>
+                            <div class="post-job__form">
+                                <div class="row post-job__form-item">
+                                    <div class="col l-4 m-6 c-12">
+                                        <label for="post-job__form-name" class="post-job__form-text">
+                                            <i class="post-job__form-icon fa-solid fa-file-signature"></i>
+                                            Tên buổi chụp ảnh/makeup
+                                        </label>
+                                    </div>
+                                    <div class="col l-8 m-6 c-12">
+                                        <input id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup">
+                                    </div>
+                                </div>
+            
+                                <div class="row post-job__form-item">
+                                    <div class="col l-4 m-6 c-12">
+                                        <label for="post-job__form-place" class="post-job__form-text">
+                                            <i class="post-job__form-icon fa-solid fa-location-dot"></i>
+                                            Địa điểm
+                                        </label>
+                                    </div>
+                                    <div class="col l-8 m-6 c-12">
+                                        <input id="post-job__form-place" type="text" class="post-job__form-input" placeholder="Địa điểm">
+                                    </div>
+                                </div>
+            
+                                <div class="row post-job__form-item">
+                                    <div class="col l-4 m-6 c-12">
+                                        <label for="post-job__form-time" class="post-job__form-text">
+                                            <i class="post-job__form-icon fa-solid fa-calendar-days"></i>
+                                            Thời gian
+                                        </label>
+                                    </div>
+                                    <div class="col l-8 m-6 c-12">
+                                        <input id="post-job__form-time" type="date" class="post-job__form-input">
+                                    </div>
+                                </div>
+            
+                                <div class="row post-job__form-item">
+                                    <div class="col l-4 m-6 c-12">
+                                        <label for="post-job__form-price" class="post-job__form-text">
+                                            <i class="post-job__form-icon fa-solid fa-sack-dollar"></i>
+                                            Giá
+                                        </label>
+                                    </div>
+                                    <div class="col l-8 m-6 c-12">
+                                        <!-- <input id="post-job__form-price" type="text" class="post-job__form-price-input" placeholder="Giá"> -->
+                                        <input id="post-job__form-price" type="text" class="post-job__form-input" placeholder="Giá (khoảng bao nhiêu)">
+                                    </div>
+                                </div>
+            
+                                <div class="row post-job__form-item">
+                                    <div class="col l-4 m-6 c-12">
+                                        <label for="post-job__form-event" class="post-job__form-text">
+                                            <i class="post-job__form-icon fa-solid fa-holly-berry"></i>
+                                            Sự kiện (nếu có)
+                                        </label>
+                                    </div>
+                                    <div class="col l-8 m-6 c-12">
+                                        <input id="post-job__form-event" type="text" class="post-job__form-input" placeholder="Sự kiện (nếu có)">
+                                    </div>
+                                </div>
+            
+                                <div class="row post-job__form-item">
+                                    <div class="col l-4 m-6 c-12">
+                                        <label for="post-job__form-style" class="post-job__form-text">
+                                            <i class="post-job__form-icon fa-solid fa-wand-magic-sparkles"></i>
+                                            Phong cách
+                                        </label>
+                                    </div>
+                                    <div class="col l-8 m-6 c-12">
+                                        <input id="post-job__form-style" type="text" class="post-job__form-input" placeholder="Phong cách">
+                                    </div>
+                                </div>
+
+                                <div class="row post-job__form-item">
+                                    <div class="col l-4 m-6 c-12">
+                                        <label for="post-job__form-upload" class="post-job__form-text">
+                                            <i class="post-job__form-icon fa-solid fa-upload"></i>
+                                            Tải ảnh mẫu (phong cách muốn chụp)
+                                        </label>
+                                    </div>
+                                    <div class="col l-8 m-6 c-12">
+                                        <input id="post-job__form-upload" type="file" class="post-job__form-input">
+                                    </div>
+                                </div>
+
+                                <div class="row post-job__form-item">
+                                    <div class="col l-4 m-6 c-12">
+                                        <label for="post-job__form-description" class="post-job__form-text">
+                                            <i class="post-job__form-icon fa-regular fa-pen-to-square"></i>
+                                            Mô tả chi tiết các yêu cầu
+                                        </label>
+                                    </div>
+                                    <div class="col l-8 m-6 c-12">
+                                        <textarea id="post-job__form-description" class="post-job__form-input" cols="1" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="post-job__control">
+                                <button class="btn post-job-btn post-job__control-btn">Lưu bản nháp</button>
+                                <button class="btn btn--primary post-job-btn">Đăng tin</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

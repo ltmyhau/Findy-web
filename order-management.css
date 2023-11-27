@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* ------------- Navbar ------------- */
+.navbar {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo-link {
+    color: transparent;
+    text-decoration: none;
+}
+
+.navbar__logo-img {
+    height: 60px;
+}
+
+.navbar__heading-link {
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.navbar__heading-icon {
+    font-size: 2.8rem;
+    color: var(--main-color);
+}
+
+/* ------------- Thông tin đơn hàng ------------- */
+.container {
+    margin-top: var(--header-height);
+    background-color: var(--background-color);
+}
+
+.content {
+    padding-top: 36px;
+}
+
+.process {
+    margin: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.process__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.process__number {
+    width: 50px;
+    height: 50px;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #BFBDBC;
+    /* background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2)); */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.7;
+    position: relative;
+}
+
+.process__step:not(:last-child) .process__number::before {
+    content: "";
+    position: absolute;
+    width: 370px;
+    border: 2px solid #BFBDBC;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.process__name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 16px;
+}

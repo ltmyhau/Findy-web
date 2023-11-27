@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findy</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="grid wide">
+
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <div class="navbar__logo">
+                        <a href="" class="navbar__logo-link">
+                            <img src="./assets/img/findy-logo-2.png" alt="Findy" class="navbar__logo-img">
+                        </a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./find-freelancer.html" class="navbar__heading-link">Thuê Thợ</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="" class="navbar__heading-link">Tìm việc</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./post-job.html" class="navbar__heading-link">Đăng tin</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./post-management.html" class="navbar__heading-link">Quản lý bài đăng</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./order-management.html" class="navbar__heading-link">Đơn hàng</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="./account.html" class="navbar__heading-link">[Tên người dùng]</a>
+                    </div>
+                    <!-- <div class="navbar__heading">
+                        <a href="" class="navbar__heading-link">Đăng ký</a>
+                    </div> -->
+                    <div class="navbar__heading">
+                        <i class="navbar__heading-icon fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="grid wide">
+                <div class="content">
+                    <div class="account__header">
+                        <div class="account__header-avatar">
+                            <img src="./assets/img/avatar-16.png" alt="Ảnh đại diện" class="account__header-avatar-img">
+                            <p class="account__header-verified">Đã xác thực</p>
+                        </div>
+                        <div class="account__header-info">
+                            <h1 class="account__header-name">Lê Tâm Nhiên</h1>
+                            <h3 class="account__header-address">Thủ Đức, Hồ Chí Minh</h3>
+                        </div>
+                    </div>
+
+                    <div class="account__container">
+                        <div class="row">
+                            <div class="col l-7 m-12 c-12">
+                                <div class="account__personal">
+                                    <div class="account__personal-info">
+                                        <h2 class="account__personal-heading">Quản lý tài khoản</h2>
+                                        <div class="account__personal-body">
+                                            <p class="account__personal-text">Tài khoản</p>
+                                            <input type="text" name="" id="" class="account__personal-input" value="ltnhien" readonly>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="account__personal-change-password">Đổi mật khẩu</a>
+                                    
+                                    <div class="account__personal-info">
+                                        <h2 class="account__personal-heading">Thông tin cá nhân</h2>
+                                        <div class="account__personal-body">
+                                            <p class="account__personal-text">Ngày sinh</p>
+                                            <input type="date" name="" id="" class="account__personal-input" value="2003-03-16">
+                                        </div>
+                                        <div class="account__personal-body">
+                                            <p class="account__personal-text">Số CCCD</p>
+                                            <input type="text" name="" id="" class="account__personal-input">
+                                        </div>
+                                        <div class="account__personal-body">
+                                            <p class="account__personal-text">Giới tính</p>
+                                            <div class="account__personal-gender">
+                                                <div class="account__gender-option">
+                                                    <input type="radio" name="gender" id="male" class="account__gender-input">
+                                                    <label for="male">Nam</label>
+                                                </div>
+                                                <div class="account__gender-option">
+                                                    <input type="radio" name="gender" id="female" class="account__gender-input" checked>
+                                                    <label for="female">Nữ</label>
+                                                </div>
+                                                <div class="account__gender-option">
+                                                    <input type="radio" name="gender" id="other" class="account__gender-input">
+                                                    <label for="other">Khác</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="account__personal-body">
+                                            <p class="account__personal-text">Email</p>
+                                            <input type="email" name="" id="" class="account__personal-input">
+                                        </div>
+                                        <div class="account__personal-body">
+                                            <p class="account__personal-text">Điện thoại</p>
+                                            <input type="text" name="" id="" class="account__personal-input">
+                                        </div>
+                                    </div>
+
+                                    <div class="account__personal-info">
+                                        <h2 class="account__personal-heading">Vô hiệu hóa và khóa tài khoản</h2>
+                                        <div class="account__personal-body">
+                                            <span class="account__personal-text">
+                                                <h4>Vô hiệu hóa</h4>
+                                                <p>Tạm thời ẩn hồ sơ</p>
+                                            </span>
+                                            <button class="btn account__personal-btn">Vô hiệu hóa tài khoản</button>                                            
+                                        </div>
+                                        <div class="account__personal-body">
+                                            <span class="account__personal-text">
+                                                <h4>Xóa </h4>
+                                                <p>Xóa hồ sơ vĩnh viễn</p>
+                                            </span>
+                                            <button class="btn account__personal-btn">Xóa tài khoản</button>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col l-5 m-12 c-12">
+                                <div class="account__history">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -4,13 +4,18 @@
     box-sizing: inherit;
 }
 
+.main {
+    overflow: hidden;
+}
+
 .header {
     background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.09);
 }
 
 /* ------------- Navbar ------------- */
@@ -38,7 +43,7 @@
     border-right: 1px solid var(--border-color);
 }
 
-.navbar__heading:last-child {
+.navbar > div:last-of-type {
     border: none;
 }
 

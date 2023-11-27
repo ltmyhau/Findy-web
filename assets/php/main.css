@@ -24,7 +24,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
 }
 
 .navbar__logo-link {
@@ -43,7 +42,7 @@
     border-right: 1px solid var(--border-color);
 }
 
-.navbar__heading:last-child {
+.navbar > div:last-of-type {
     border: none;
 }
 

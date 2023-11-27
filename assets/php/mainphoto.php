@@ -16,17 +16,12 @@
     include "id_tho.php";
 ?>
 
-
 <?php
 // Các công việc khác cần làm trên trang mainphoto.php
 echo "ID của Thợ: " . $id_tho;
 echo "ID của Thợ: " . $hoTen;
 ?>
-
-        
-
-
-        
+     
 <?php
         include "headerphoto1.php";
     ?>
@@ -60,7 +55,6 @@ echo "ID của Thợ: " . $hoTen;
                             </div>
                         </div>
                     </div>
-                
             </div>
         </div>
     </section>

@@ -78,35 +78,43 @@
                 <div class="content">
                     <div class="row process">
                         <div class="col l-3 m-3 c-3">
-                            <a href="./photoconfirm.php" class="process__step">
-                                <p class="process__number selected">1</p>
-                                <p class="process__name">Xác nhận</p>
-                            </a>
+                            <div class="process__group">
+                                <a href="./photoconfirm.php" target="loadpage" class="process__step active">
+                                    <p class="process__number">1</p>
+                                    <p class="process__name">Xác nhận</p>
+                                </a>
+                            </div>
                         </div>
                         <div class="col l-3 m-3 c-3">
-                            <a href="./photoperform.php"  class="process__step">
-                                <p class="process__number">2</p>
-                                <p class="process__name">Thực hiện</p>
-                            </a>
+                            <div class="process__group">
+                                <a href="./photoperform.php"  target="loadpage" class="process__step">
+                                    <p class="process__number">2</p>
+                                    <p class="process__name">Thực hiện</p>
+                                </a>
+                            </div>
                         </div>
                         <div class="col l-3 m-3 c-3">
-                            <a href="./photodelivery.php" class="process__step">
-                                <p class="process__number">3</p>
-                                <p class="process__name">Giao sản phẩm</p>
-                            </a>
+                            <div class="process__group">
+                                <a href="./photodelivery.php" target="loadpage" class="process__step">
+                                    <p class="process__number">3</p>
+                                    <p class="process__name">Giao sản phẩm</p>
+                                </a>
+                            </div>
                         </div>
                         <div class="col l-3 m-3 c-3">
-                            <a href="./photopayment.php" class="process__step">
-                                <p class="process__number">4</p>
-                                <p class="process__name">Đã được thanh toán</p>
-                            </a>
+                            <div class="process__group">
+                                <a href="./photopayment.php" target="loadpage" class="process__step">
+                                    <p class="process__number">4</p>
+                                    <p class="process__name">Đã được thanh toán</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <article>
-                        <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" height="700px" scrolling="no" width="100%"></iframe>
+                        <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" scrolling="no" height="300px" width="100%"></iframe>
                     </article>
-                </div>
+                </div> 
             </div>
         </div>
     </div>

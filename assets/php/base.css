@@ -1,5 +1,5 @@
 :root {
-    --main-color: #40916c; /* Đây là biến màu chính, bạn có thể thay đổi mã màu tùy ý */
+    --main-color: #478C43; /* Đây là biến màu chính, bạn có thể thay đổi mã màu tùy ý */
     --main-background:#ffffff;
     --main-header:white;
     --background-color: #f5f5f5;
@@ -9,8 +9,10 @@
     --forthe-color:#222;
     --complete-color:#222;
     --headeruser-text: white;
-    --gradient-color-1: #0097b2;
-    --gradient-color-2: #7ed957;
+    /* --gradient-color-1: #0097b2;
+    --gradient-color-2: #7ed957; */
+    --gradient-color-1: #478C43;
+    --gradient-color-2: #395B37;
     --header-height: 60px;
 }
 

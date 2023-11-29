@@ -1,8 +1,3 @@
-// Tự động tăng height của iframe
-var iframe = document.getElementById("myiframe");
-iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-
-
 // Đặt sự kiện click cho mỗi liên kết
 const iconLinks = document.querySelectorAll(".process__step");
 iconLinks.forEach((link) => {

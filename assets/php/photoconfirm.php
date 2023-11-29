@@ -45,7 +45,9 @@
                 </div>
 
                 <div class="order__info">
-                    <button class="btn order-btn">Đã thực hiện</button>
+                    <span class="order__title">
+                        <em>Đơn đợi khách hàng thanh toán</em>
+                    </span>
                 </div>
 
                 <a href="" class="order__detail">

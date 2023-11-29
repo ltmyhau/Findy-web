@@ -112,7 +112,7 @@
                     </div>
 
                     <article>
-                        <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" scrolling="no" height="300px" width="100%"></iframe>
+                        <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" scrolling="no" height="700px" width="100%"></iframe>
                     </article>
                 </div> 
             </div>

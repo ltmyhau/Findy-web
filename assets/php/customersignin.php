@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
+    <link rel="icon" href="./img/findy-logo.jpg" sizes="6x6">
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./customersignin.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
@@ -35,10 +35,10 @@ echo "ID của Thợ: " . $hoTen;
         ?>
 
 <section>
-        <div class="space">
-            
-        </div>
-    </section>
+    <div class="space">
+        
+    </div>
+</section>
     <section>
         <div class="videomain">
             <div class="videomain_video">
@@ -1112,3 +1112,4 @@ echo "ID của Thợ: " . $hoTen;
     <?php
         include "footer.php"
     ?>
+</body>

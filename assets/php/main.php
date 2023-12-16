@@ -1,3 +1,17 @@
+<!DOCTYPE php>
+<php lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./img/findy-logo.png" sizes="8x8">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDY</title>
+</head>
+
+<body>
 <?php
 include "header.php"
 ?>
@@ -1285,3 +1299,4 @@ include "header.php"
 <?php
 include "footer.php"
 ?>
+</body>

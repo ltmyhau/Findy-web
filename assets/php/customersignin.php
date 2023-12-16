@@ -1,52 +1,56 @@
 <!DOCTYPE php>
 <php lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="./img/findy-logo.jpg" sizes="6x6">
-    <link rel="stylesheet" href="./base.css">
-    <link rel="stylesheet" href="./customersignin.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDY</title>
-</head>
-<body>
-<?php
-session_start();
 
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-if (!isset($_SESSION['id_thue']) || !isset($_SESSION['hoTen'])|| !isset($_SESSION['gmail'])) {
-    // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập hoặc hiển thị thông báo lỗi
-    header("Location: main.php");
-    exit();
-}
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="./img/findy-logo.jpg" sizes="6x6">
+        <link rel="stylesheet" href="./base.css">
+        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="./customersignin.css">
+        <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FINDY</title>
+    </head>
 
-// Lấy thông tin người dùng từ session
-$id_thue = $_SESSION['id_thue'];
-$hoTen = $_SESSION['hoTen'];
+    <body>
+        <?php
+        session_start();
 
-// Các công việc khác cần làm trên trang mainphoto.php
+        // Kiểm tra xem người dùng đã đăng nhập hay chưa
+        if (!isset($_SESSION['id_thue']) || !isset($_SESSION['hoTen']) || !isset($_SESSION['gmail'])) {
+            // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập hoặc hiển thị thông báo lỗi
+            header("Location: main.php");
+            exit();
+        }
 
-echo "ID của Thợ: " . $id_thue;
-echo "ID của Thợ: " . $hoTen;
+        // Lấy thông tin người dùng từ session
+        $id_thue = $_SESSION['id_thue'];
+        $hoTen = $_SESSION['hoTen'];
 
-?>
-<?php
-            include "headercustomer.php";
+        // Các công việc khác cần làm trên trang mainphoto.php
+
+        echo "ID của Thợ: " . $id_thue;
+        echo "ID của Thợ: " . $hoTen;
+
+        ?>
+        <?php
+        include "headercustomer.php";
         ?>
 
-<section>
-    <div class="space">
-        
-    </div>
-</section>
-    <section>
-        <div class="videomain">
-            <div class="videomain_video">
-                    <video id="myVideo" autoplay >
+        <section>
+            <div class="space">
+
+            </div>
+        </section>
+        <section>
+            <div class="videomain">
+                <div class="videomain_video">
+                    <video id="myVideo" autoplay>
                         <source src="./video/Cinematic Camera Intro.mp4" type="video/mp4">
                         Trình duyệt của bạn không hỗ trợ video HTML5.
-                      </video>
-                      <div class="videomain_text">
+                    </video>
+                    <div class="grid wide">
+                        <div class="videomain_text">
                             <div class="videomain_text--header">
                                 <p>Thuê các Photographer & Make-up Artist tốt nhất cho mọi công việc trực tuyến.</p>
                             </div>
@@ -57,42 +61,42 @@ echo "ID của Thợ: " . $hoTen;
                                     <li>Chỉ trả tiền khi thấy hài lòng 100%</li>
                                 </ul>
                             </div>
-                            
-                      </div>
-            </div>
-        </div>
-    </section>
-    
-    <section>
-        <div class="complete">
-            <div class="grid wide">
-                <div class="complete_container">
-                    <div class="complete_header">
-                        Cần hoàn thành công việc?
-                    </div>
-                    <div class="complete_items row">
-                        <div class="complete_items--content col c-3 m-3 l-3">
-                            <h1>Đăng công việc</h1>
-                            <p>Đăng công việc miễn phí và dễ dàng. Chỉ cần điền vào tiêu đề, mô tả và ngân sách, các thứ bạn cần sẽ đến trong chốc lát.</p>
-                        </div>
-                        <div class="complete_items--content col c-3 m-3 l-3">
-                            <h1>Chọn</h1>
-                            <p>Không có công việc nào là quá lớn hay quá nhỏ. Chúng tôi luôn có các thứ cần thiết thuộc mọi quy mô hay ngân sách. Cái gì quá phức tạp, Chúng tôi đều có thể hoàn thành!</p>
-                        </div>
-                        <div class="complete_items--content col c-3 m-3 l-3">
-                            <h1>Chi trả an toàn</h1>
-                            <p>Chỉ chi trả khi công việc được hoàn thành và bạn thấy hài lòng 100% với chất lượng, thông qua hệ thống các mốc thanh toán của chúng tôi.</p>
-                        </div>
-                        <div class="complete_items--content col c-3 m-3 l-3">
-                            <h1>Chúng tôi ở đây để hỗ trợ</h1>
-                            <p>Đội ngũ tuyển dụng viên tài năng của chúng tôi có thể giúp bạn tìm được Photographer & Make-up Artist tốt nhất.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="container">
+        </section>
+
+        <section>
+            <div class="complete">
+                <div class="grid wide">
+                    <div class="complete_container">
+                        <div class="complete_header">
+                            Cần hoàn thành công việc?
+                        </div>
+                        <div class="complete_items row">
+                            <div class="complete_items--content col c-3 m-3 l-3">
+                                <h1>Đăng công việc</h1>
+                                <p>Đăng công việc miễn phí và dễ dàng. Chỉ cần điền vào tiêu đề, mô tả và ngân sách, các thứ bạn cần sẽ đến trong chốc lát.</p>
+                            </div>
+                            <div class="complete_items--content col c-3 m-3 l-3">
+                                <h1>Chọn</h1>
+                                <p>Không có công việc nào là quá lớn hay quá nhỏ. Chúng tôi luôn có các thứ cần thiết thuộc mọi quy mô hay ngân sách. Cái gì quá phức tạp, Chúng tôi đều có thể hoàn thành!</p>
+                            </div>
+                            <div class="complete_items--content col c-3 m-3 l-3">
+                                <h1>Chi trả an toàn</h1>
+                                <p>Chỉ chi trả khi công việc được hoàn thành và bạn thấy hài lòng 100% với chất lượng, thông qua hệ thống các mốc thanh toán của chúng tôi.</p>
+                            </div>
+                            <div class="complete_items--content col c-3 m-3 l-3">
+                                <h1>Chúng tôi ở đây để hỗ trợ</h1>
+                                <p>Đội ngũ tuyển dụng viên tài năng của chúng tôi có thể giúp bạn tìm được Photographer & Make-up Artist tốt nhất.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
             <div class="grid wide">
                 <div class="row content">
                     <div class="col l-3 m-4 c-0">
@@ -284,7 +288,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Trần Minh Khánh
@@ -320,7 +324,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Bình Thạnh, Hồ Chí Minh</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-1-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -343,7 +347,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-2.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Trương Thu Trang
@@ -379,7 +383,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Quận 1, Hồ Chí Minh</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-2-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -402,7 +406,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-3.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Nguyễn Văn Nam
@@ -438,7 +442,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Đà Nẵng</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-3-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -461,7 +465,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-4.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Vũ Quốc Tuấn
@@ -497,7 +501,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Gò Vấp, Hồ Chí Minh</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-4-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -520,7 +524,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-5.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Đỗ Hoàng Anh
@@ -556,7 +560,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Thanh Xuân, Hà Nội</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-5-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -579,7 +583,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-6.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Hoàng Diệu Linh
@@ -615,7 +619,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Thủ Đức, Hồ Chí Minh</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-6-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -639,7 +643,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-7.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Lê Phương Mai
@@ -675,7 +679,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Thủ Đức, Hồ Chí Minh</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-7-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -698,7 +702,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-8.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Lê Hoàng Long
@@ -734,7 +738,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Đống Đa, Hà Nội</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-8-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -757,7 +761,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <img src="./img/avatar-9.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
                                                     <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                 </div>
-                                                
+
                                                 <div class="freelancer-item__info">
                                                     <span class="freelancer-item__title">
                                                         Ngô Thảo Trang
@@ -793,7 +797,7 @@ echo "ID của Thợ: " . $hoTen;
                                                     <span class="freelancer-item__contact-text">Đà Lạt, Lâm Đồng</span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="slide-show-artwork">
                                                 <div class="freelancer-item__artwork-list">
                                                     <img src="./img/collection-9-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
@@ -848,8 +852,8 @@ echo "ID của Thợ: " . $hoTen;
                 </div>
             </div>
         </div>
-       
-    <!-- <section>
+
+        <!-- <section>
         <div class="main">
             
             <div class="grid wide">
@@ -938,7 +942,7 @@ echo "ID của Thợ: " . $hoTen;
             </div>
         </div>
     </section> -->
-    <!-- <section>
+        <!-- <section>
         <div class="product">
             <div class="grid wide">
                 <div class="row">
@@ -1000,7 +1004,7 @@ echo "ID của Thợ: " . $hoTen;
             </div>
         </div>
     </section> -->
-    <!-- <section>
+        <!-- <section>
         <div class="banner">
             <div class="grid wide">
                 
@@ -1023,93 +1027,93 @@ echo "ID của Thợ: " . $hoTen;
             </div>
         </div>
     </section> -->
-    <section>
-        <div class="forthe">
-            <div class="grid wide">
-                <div class="forthe_container">
-                    <div class="forthe_items">
-                        <div class="forthe_items-top">
-                            For the items
+        <section>
+            <div class="forthe">
+                <div class="grid wide">
+                    <div class="forthe_container">
+                        <div class="forthe_items">
+                            <div class="forthe_items-top">
+                                For the items
+                            </div>
+                            <div class="forthe_items-bottom">
+                                <div class="forthe_items-bottom--container row">
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/“Life’s a party with you” wedding decor.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/“Life’s a party with you” wedding decor.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/“Life’s a party with you” wedding decor.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/“Life’s a party with you” wedding decor.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="forthe_items-bottom">
-                            <div class="forthe_items-bottom--container row">
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/“Life’s a party with you” wedding decor.jpg" alt="">
+                        <div class="forthe_items">
+                            <div class="forthe_items-top">
+                                For the reception
+                            </div>
+                            <div class="forthe_items-bottom">
+                                <div class="forthe_items-bottom--container row">
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/This City-Loving Couple Said _I Do_ in a Glam Gramercy Park Hotel Wedding in NYC _ Junebug Weddings.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/download.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/ONE WEDDING DA NANG.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/download (1).jpg" alt="">
+                                    </div>
                                 </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/“Life’s a party with you” wedding decor.jpg" alt="">
-                                </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/“Life’s a party with you” wedding decor.jpg" alt="">
-                                </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/“Life’s a party with you” wedding decor.jpg" alt="">
-                                </div>
-                            </div>         
+                            </div>
                         </div>
-                    </div>
-                    <div class="forthe_items">
-                        <div class="forthe_items-top">
-                            For the reception
+                        <div class="forthe_items">
+                            <div class="forthe_items-top">
+                                For the spotlight
+                            </div>
+                            <div class="forthe_items-bottom">
+                                <div class="forthe_items-bottom--container row">
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/Nothing less than perfect.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/Knowing Your Territory_ Can You Make a Living Podcasting_.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/Exclusive Photos! Head Backstage for a Magical Pre-Show Peek at the Soaring Stars of Pippin.jpg" alt="">
+                                    </div>
+                                    <div class="forthe_items-bottom-img col c-3 m-3 l-3">
+                                        <img src="./img/download (2).jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="forthe_items-bottom">
-                            <div class="forthe_items-bottom--container row">
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/This City-Loving Couple Said _I Do_ in a Glam Gramercy Park Hotel Wedding in NYC _ Junebug Weddings.jpg" alt="">
+                        <div class="forthe_items">
+                            <div class="forthe_items-top">
+                                Photographers capture beautiful moments and turn them into art through their camera lenses, while Make-up Artists transform faces into vibrant canvases using colors and techniques. Both professions not only enhance the beauty of individuals but also create unique artistic works that boost confidence and self-expression. Together, they play a crucial role in making people feel special and capturing the world from a perspective of beauty and art.
+                            </div>
+                            <div class="forthe_items-bottom">
+                                <video id="mVideo" autoplay>
+                                    <source src="./video/videomakeup.mp4" type="video/mp4">
+                                    Trình duyệt của bạn không hỗ trợ video HTML5.
+                                </video>
+                                <div class="buttom_voice">
+
                                 </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/download.jpg" alt="">
-                                </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/ONE WEDDING DA NANG.jpg" alt="">
-                                </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/download (1).jpg" alt="">
-                                </div>
-                            </div>         
-                        </div>
-                    </div>
-                    <div class="forthe_items">
-                        <div class="forthe_items-top">
-                            For the spotlight
-                        </div>
-                        <div class="forthe_items-bottom">
-                            <div class="forthe_items-bottom--container row">
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/Nothing less than perfect.jpg" alt="">
-                                </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/Knowing Your Territory_ Can You Make a Living Podcasting_.jpg" alt="">
-                                </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/Exclusive Photos! Head Backstage for a Magical Pre-Show Peek at the Soaring Stars of Pippin.jpg" alt="">
-                                </div>
-                                <div class="forthe_items-bottom-img col c-3 m-3 l-3">
-                                    <img src="./img/download (2).jpg" alt="">
-                                </div>
-                            </div>         
-                        </div>
-                    </div>
-                    <div class="forthe_items">
-                        <div class="forthe_items-top">
-                        Photographers capture beautiful moments and turn them into art through their camera lenses, while Make-up Artists transform faces into vibrant canvases using colors and techniques. Both professions not only enhance the beauty of individuals but also create unique artistic works that boost confidence and self-expression. Together, they play a crucial role in making people feel special and capturing the world from a perspective of beauty and art.
-                        </div>
-                        <div class="forthe_items-bottom">
-                            <video id="mVideo" autoplay >
-                                <source src="./video/videomakeup.mp4" type="video/mp4">
-                                Trình duyệt của bạn không hỗ trợ video HTML5.
-                            </video>
-                        <div class="buttom_voice">
-                        
-                    </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <?php
+        </section>
+
+        <?php
         include "footer.php"
-    ?>
-</body>
+        ?>
+    </body>

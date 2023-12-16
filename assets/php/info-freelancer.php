@@ -1,98 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Findy</title>
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./info-freelancer.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
 </head>
+
 <body>
-<?php
-    include "id_thue.php";
-?>
-<?php
-
-
-
-// Retrieve data from session variables
-$ma_profile = $_SESSION['ma_profile'];
-$anhtho = $_SESSION['anhtho'];
-$ten = $_SESSION['ten'];
-$nghenghiep = $_SESSION['nghenghiep'];
-$sdt = $_SESSION['sdt'];
-$email = $_SESSION['email'];
-$diachi = $_SESSION['diachi'];
-$gioithieu = $_SESSION['gioithieu'];
-
-// Clear session variables after retrieving data
-session_unset();
-session_destroy();
-// Kết nối đến cơ sở dữ liệu (sử dụng thông tin kết nối của bạn)
-include "db_connection.php";
-
-// Truy vấn SQL để lấy thông tin từ bảng thongtinthue dựa trên id_thue
-$sql = "SELECT * FROM thongtinthue WHERE id_thue = $id_thue";
-$result = $conn->query($sql);
-
-// Kiểm tra nếu có kết quả
-if ($result->num_rows > 0) {
-    // Lặp qua từng dòng kết quả
-    while ($row = $result->fetch_assoc()) {
-        // Lấy thông tin từ cột cần thiết
-        $mathongtinthue = $row['mathongtinthue'];
-        $hinhanhthue = $row['hinhanhthue'];
-        $ten = $row['ten'];
-        $diachi = $row['diachi'];
-        $ngaysinh = $row['ngaysinh'];
-        $cccd = $row['cccd'];
-        $gioitinh = $row['gioitinh'];
-        $email = $row['email'];
-        $sdt = $row['sdt'];
-
-        
-    }
-} else {
-    $mathongtinthue = "";
-    $hinhanhthue = ""; // You may set a default image path or leave it empty
-    $ten = "";
-    $diachi = "";
-    $ngaysinh = "";
-    $cccd = "";
-    $gioitinh = ""; // Set a default value or leave it empty
-    $email = "";
-    $sdt = "";
-
-    // Thông báo không tìm thấy thông tin
-    echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
-}
-
-echo "ID của Thợ: " . $id_thue;
-echo "ID của Thợ: " . $hoTen;
-echo "Ima thong tin Thợ: " . $mathongtinthue;
-echo "ID của Thợ: " . $diachi;
-
-
-echo "ID của Thợ: " . $ma_profile;
-echo "ID của Thợ: " . $ten;
-
-
-echo "ID của Thợ: " . $nghenghiep;
-echo "ID của Thợ: " . $diachi;
-
-
-
-echo "ID của Thợ: " . $id_thue;
-echo "ID của Thợ: " . $hoTen;
-
-?>
-    <div class="main">
     <?php
-            include "headercustomer.php";
-        ?>
+    include "id_thue.php";
+    ?>
+    <?php
 
+    // Retrieve data from session variables
+    $ma_profile = $_SESSION['ma_profile'];
+    $anhtho = $_SESSION['anhtho'];
+    $ten = $_SESSION['ten'];
+    $nghenghiep = $_SESSION['nghenghiep'];
+    $sdt = $_SESSION['sdt'];
+    $email = $_SESSION['email'];
+    $diachi = $_SESSION['diachi'];
+    $gioithieu = $_SESSION['gioithieu'];
+
+    // Clear session variables after retrieving data
+    session_unset();
+    session_destroy();
+    // Kết nối đến cơ sở dữ liệu (sử dụng thông tin kết nối của bạn)
+    include "db_connection.php";
+
+    // Truy vấn SQL để lấy thông tin từ bảng thongtinthue dựa trên id_thue
+    $sql = "SELECT * FROM thongtinthue WHERE id_thue = $id_thue";
+    $result = $conn->query($sql);
+
+    // Kiểm tra nếu có kết quả
+    if ($result->num_rows > 0) {
+        // Lặp qua từng dòng kết quả
+        while ($row = $result->fetch_assoc()) {
+            // Lấy thông tin từ cột cần thiết
+            $mathongtinthue = $row['mathongtinthue'];
+            $hinhanhthue = $row['hinhanhthue'];
+            $ten = $row['ten'];
+            $diachi = $row['diachi'];
+            $ngaysinh = $row['ngaysinh'];
+            $cccd = $row['cccd'];
+            $gioitinh = $row['gioitinh'];
+            $email = $row['email'];
+            $sdt = $row['sdt'];
+        }
+    } else {
+        $mathongtinthue = "";
+        $hinhanhthue = ""; // You may set a default image path or leave it empty
+        $ten = "";
+        $diachi = "";
+        $ngaysinh = "";
+        $cccd = "";
+        $gioitinh = ""; // Set a default value or leave it empty
+        $email = "";
+        $sdt = "";
+
+        // Thông báo không tìm thấy thông tin
+        // echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
+    }
+
+    // echo "ID của Thợ: " . $id_thue;
+    // echo "ID của Thợ: " . $hoTen;
+    // echo "Ima thong tin Thợ: " . $mathongtinthue;
+    // echo "ID của Thợ: " . $diachi;
+
+
+    // echo "ID của Thợ: " . $ma_profile;
+    // echo "ID của Thợ: " . $ten;
+
+
+    // echo "ID của Thợ: " . $nghenghiep;
+    // echo "ID của Thợ: " . $diachi;
+
+
+
+    // echo "ID của Thợ: " . $id_thue;
+    // echo "ID của Thợ: " . $hoTen;
+
+    ?>
+    <?php
+    include "headercustomer.php";
+    ?>
+
+    <div class="main">
         <div class="container">
             <div class="grid wide">
                 <div class="content">
@@ -102,7 +101,7 @@ echo "ID của Thợ: " . $hoTen;
                                 <div class="freelancer-info">
                                     <div class="personal-info">
                                         <div class="personal-info__avatar">
-                                            <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="personal-info__avatar-img">
+                                            <div class="personal-info__avatar-img" style="background-image: url(./img/avatar-1.png);"></div>
                                         </div>
                                         <h1 class="personal-info__name">
                                             Trần Minh Khánh
@@ -137,7 +136,7 @@ echo "ID của Thợ: " . $hoTen;
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-location-dot"></i>
                                             <span class="contact-info__info-text">Bình Thạnh, Hồ Chí Minh</span>
-                                        </div>                                
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -156,10 +155,10 @@ echo "ID của Thợ: " . $hoTen;
                                             <div class="artwork-collection">
                                                 <h5 class="artwork-collection__name">Việt phục</h5>
                                                 <div class="artwork-collection__list">
-                                                    <img src="./img/concept-1-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-1-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-1-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-1-4.png" alt="" class="artwork-collection__img">
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-1-1.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-1-2.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-1-3.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-1-4.png);"></div>
                                                 </div>
                                                 <p class="artwork-collection__price">1.990.000 đ - 2.990.000 đ</p>
                                                 <div class="artwork-collection__info">
@@ -182,10 +181,10 @@ echo "ID của Thợ: " . $hoTen;
                                             <div class="artwork-collection">
                                                 <h3 class="artwork-collection__name">Gia đình</h3>
                                                 <div class="artwork-collection__list">
-                                                    <img src="./img/concept-2-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-2-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-2-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-2-4.png" alt="" class="artwork-collection__img">
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-2-1.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-2-2.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-2-3.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-2-4.png);"></div>
                                                 </div>
                                                 <p class="artwork-collection__price">1.690.000 đ - 2.290.000 đ</p>
                                                 <div class="artwork-collection__info">
@@ -208,10 +207,10 @@ echo "ID của Thợ: " . $hoTen;
                                             <div class="artwork-collection">
                                                 <h3 class="artwork-collection__name">Sinh nhật</h3>
                                                 <div class="artwork-collection__list">
-                                                    <img src="./img/concept-3-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-3-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-3-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-3-4.png" alt="" class="artwork-collection__img">
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-3-1.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-3-2.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-3-3.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-3-4.png);"></div>
                                                 </div>
                                                 <p class="artwork-collection__price">800.000 đ - 1.200.000 đ</p>
                                                 <div class="artwork-collection__info">
@@ -234,10 +233,10 @@ echo "ID của Thợ: " . $hoTen;
                                             <div class="artwork-collection">
                                                 <h3 class="artwork-collection__name">Ngoại cảnh</h3>
                                                 <div class="artwork-collection__list">
-                                                    <img src="./img/concept-4-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-4-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-4-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-4-4.png" alt="" class="artwork-collection__img">
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-4-1.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-4-2.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-4-3.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-4-4.png);"></div>
                                                 </div>
                                                 <p class="artwork-collection__price">490.000 đ - 590.000 đ</p>
                                                 <div class="artwork-collection__info">
@@ -260,10 +259,10 @@ echo "ID của Thợ: " . $hoTen;
                                             <div class="artwork-collection">
                                                 <h3 class="artwork-collection__name">Học đường</h3>
                                                 <div class="artwork-collection__list">
-                                                    <img src="./img/concept-5-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-5-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-5-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-5-4.png" alt="" class="artwork-collection__img">
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-5-1.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-5-2.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-5-3.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-5-4.png);"></div>
                                                 </div>
                                                 <p class="artwork-collection__price">150.000 đ - 290.000 đ</p>
                                                 <div class="artwork-collection__info">
@@ -286,10 +285,10 @@ echo "ID của Thợ: " . $hoTen;
                                             <div class="artwork-collection">
                                                 <h3 class="artwork-collection__name">Tết Tết Tết</h3>
                                                 <div class="artwork-collection__list">
-                                                    <img src="./img/concept-6-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-6-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-6-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-6-4.png" alt="" class="artwork-collection__img">
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-6-1.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-6-2.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-6-3.png);"></div>
+                                                    <div class="artwork-collection__img" style="background-image: url(./img/concept-6-4.png);"></div>
                                                 </div>
                                                 <p class="artwork-collection__price">1.000.000 đ - 1.500.000 đ</p>
                                                 <div class="artwork-collection__info">
@@ -489,27 +488,27 @@ echo "ID của Thợ: " . $hoTen;
                     <h3 class="require-form__heading">Yêu cầu của bạn</h3>
                 </div>
                 <?php
-                    include "connect.php";
+                include "connect.php";
                 ?>
                 <?php
-                    $connect = new connect;
-                    if($_SERVER['REQUEST_METHOD']==='POST'){
-                        $insert_postjob = $connect -> insert_postjob();
-                    }
+                $connect = new connect;
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $insert_postjob = $connect->insert_postjob();
+                }
                 ?>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="require-form__form">
 
                         <div class="row post-job__form-item">
-                                        <div class="col l-4 m-6 c-12">
-                                            <label for="post-job__form-name" class="post-job__form-text">
-                                                <i class="post-job__form-icon fa-solid fa-file-signature"></i>
-                                                Mã thông tin người thuê
-                                            </label>
-                                        </div>
-                                        <div class="col l-8 m-6 c-12">
-                                            <input name="post-job__form-ma" id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup" value="<?php echo $mathongtinthue ?>">
-                                        </div>
+                            <div class="col l-4 m-6 c-12">
+                                <label for="post-job__form-name" class="post-job__form-text">
+                                    <i class="post-job__form-icon fa-solid fa-file-signature"></i>
+                                    Mã thông tin người thuê
+                                </label>
+                            </div>
+                            <div class="col l-8 m-6 c-12">
+                                <input name="post-job__form-ma" id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup" value="<?php echo $mathongtinthue ?>">
+                            </div>
                         </div>
                         <div class="row require-form__item">
                             <div class="col l-4 m-6 c-12">
@@ -556,7 +555,7 @@ echo "ID của Thợ: " . $hoTen;
                             </div>
                             <div class="col l-8 m-6 c-12">
                                 <div class="require-form__price-input">
-                                <input name="post-job__form-price" id="post-job__form-price" type="text" class="post-job__form-input" placeholder="Giá (khoảng bao nhiêu)">
+                                    <input name="post-job__form-price" id="post-job__form-price" type="text" class="post-job__form-input" placeholder="Giá (khoảng bao nhiêu)">
 
                                 </div>
                             </div>
@@ -586,27 +585,27 @@ echo "ID của Thợ: " . $hoTen;
                             </div>
                         </div>
                         <div class="row require-form__item">
-                                        <div class="col l-4 m-6 c-12">
-                                            <label for="post-job__form-upload" class="require-form__text">
-                                                <i class="require-form__icon fa-solid fa-upload"></i>
-                                                Tải ảnh mẫu (phong cách muốn chụp)
-                                            </label>
-                                        </div>
-                                        <div class="col l-8 m-6 c-12">
-                                            <input name="hinhanh" id="post-job__form-upload" type="file" class="post-job__form-input">
-                                        </div>
+                            <div class="col l-4 m-6 c-12">
+                                <label for="post-job__form-upload" class="require-form__text">
+                                    <i class="require-form__icon fa-solid fa-upload"></i>
+                                    Tải ảnh mẫu (phong cách muốn chụp)
+                                </label>
+                            </div>
+                            <div class="col l-8 m-6 c-12">
+                                <input name="hinhanh" id="post-job__form-upload" type="file" class="post-job__form-input">
+                            </div>
                         </div>
 
                         <div class="row require-form__item">
-                                        <div class="col l-4 m-6 c-12">
-                                            <label for="post-job__form-description" class="prequire-form__text">
-                                                <i class="require-form__icon fa-regular fa-pen-to-square"></i>
-                                                Mô tả chi tiết các yêu cầu
-                                            </label>
-                                        </div>
-                                        <div class="col l-8 m-6 c-12">
-                                            <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5"></textarea>
-                                        </div>
+                            <div class="col l-4 m-6 c-12">
+                                <label for="post-job__form-description" class="prequire-form__text">
+                                    <i class="require-form__icon fa-regular fa-pen-to-square"></i>
+                                    Mô tả chi tiết các yêu cầu
+                                </label>
+                            </div>
+                            <div class="col l-8 m-6 c-12">
+                                <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5"></textarea>
+                            </div>
                         </div>
                     </div>
 
@@ -633,9 +632,10 @@ echo "ID của Thợ: " . $hoTen;
 
         modal.addEventListener('click', hideRequireForm)
 
-        modalContainer.addEventListener('click', function (event) {
+        modalContainer.addEventListener('click', function(event) {
             event.stopPropagation()
         })
     </script>
 </body>
+
 </html>

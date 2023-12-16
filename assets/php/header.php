@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/findy-logo.png" sizes="8x8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDY</title>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                     </a>
                 </div>
                 <div class="navbar__heading">
-                    <a href="./find-freelancer.php" class="navbar__heading-link">Thuê Thợ</a>
+                    <a href="./find-timtho.php" class="navbar__heading-link">Thuê Thợ</a>
                 </div>
                 <div class="navbar__heading">
                     <a href="" class="navbar__heading-link">Tìm việc</a>
@@ -58,7 +59,7 @@
                 </div>
                 <div class="mobile__heading">
                     <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>
-                    <a href="./find-freelancer.html" class="mobile__heading-link">Thuê Thợ</a>
+                    <a href="./find-timtho.html" class="mobile__heading-link">Thuê Thợ</a>
                 </div>
                 <div class="mobile__heading">
                     <i class="mobile__heading-icon fa-solid fa-magnifying-glass"></i>

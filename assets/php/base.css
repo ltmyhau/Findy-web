@@ -1,5 +1,5 @@
 :root {
-    --main-color: #478C43; /* Đây là biến màu chính, bạn có thể thay đổi mã màu tùy ý */
+    --main-color: #478C43;
     --main-background:#ffffff;
     --main-header:white;
     --background-color: #f5f5f5;
@@ -66,6 +66,7 @@ html {
     font-size: 1.2rem;
     color: #D5D5D5;
     padding: 8px 0;
+    user-select: none;
 }
 
 .star-rating--gold {

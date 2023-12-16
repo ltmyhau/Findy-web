@@ -164,10 +164,14 @@
 }
 
 .personal-info__avatar-img {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
+    width: 50%;
+    padding-top: 50%;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin: 0 auto;
 }
 
 .personal-info__name {
@@ -279,9 +283,12 @@
 
 .artwork-collection__img {
     width: calc(50% - 4px);
-    object-fit: cover;
-    margin: 2px;
+    padding-top: calc(50% - 4px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
     border: 1px solid var(--border-color);
+    margin: 2px;
 }
 
 .artwork-collection__price {

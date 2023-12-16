@@ -1,14 +1,15 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/findy-logo.png" sizes="8x8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./find-timtho.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDY</title>
 </head>
 
 <body>
@@ -28,8 +29,6 @@
     include "headercustomer.php";
     ?>
     <div class="main">
-
-
         <div class="container">
             <div class="grid wide">
                 <div class="row content">
@@ -240,7 +239,6 @@
                                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                                     <div class="freelancer-item__personal-info">
                                                         <div class="freelancer-item__avatar">
-                                                            <!-- <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img"> -->
                                                             <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-1.png);"></div>
                                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                                         </div>
@@ -283,9 +281,9 @@
 
                                                     <div class="slide-show-artwork">
                                                         <div class="freelancer-item__artwork-list">
-                                                            <img src="./img/collection-1-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                                            <img src="./img/collection-1-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                                            <img src="./img/collection-1-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-1.png);" onclick="changeImage1()"></div>
+                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-2.png);" onclick="changeImage2()"></div>
+                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-3.png);" onclick="changeImage3()"></div>
                                                         </div>
                                                     </div>
                                                 </a>

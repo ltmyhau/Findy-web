@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Findy</title>
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./post-job.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
@@ -70,7 +71,7 @@ $conn->close();
 
 ?>
     <div class="main">
-    <?php
+        <?php
             include "headercustomer.php";
         ?>
         <div class="container">
@@ -286,7 +287,6 @@ $conn->close();
                 </div>
             </div>
         </div>
-        
     </section>
 </body>
 </html>

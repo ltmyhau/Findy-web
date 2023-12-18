@@ -21,7 +21,7 @@
                         <a href="./managerrequest.php" class="navbar__heading-link">Quản lý yêu cầu</a>
                     </div>
                     <div class="navbar__heading">
-                        <a href="./manageroder.php" class="navbar__heading-link">Quản lý đơn hàng</a>
+                        <a href="./photomanageroder.php" class="navbar__heading-link">Quản lý đơn hàng</a>
                     </div>
                     
                     <div class="navbar__heading">

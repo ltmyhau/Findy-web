@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="row content">
+    <div class="content">
         <div class="col l-12 m-12 c-12">
             <div class="order">
                 <div class="order__avatar">

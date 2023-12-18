@@ -75,7 +75,7 @@
 
     <div class="container">
             <div class="grid wide">
-                <div class="content">
+                <div class="content" style="padding-top: 36px;">
                     <div class="row process">
                         <div class="col l-3 m-3 c-3">
                             <div class="process__group">
@@ -112,7 +112,7 @@
                     </div>
 
                     <article>
-                        <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" scrolling="yes" height="700px" width="100%"></iframe>
+                        <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;"></iframe>
                     </article>
                 </div> 
             </div>

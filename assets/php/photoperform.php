@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="row content">
+    <div class="content">
         <div class="col l-12 m-12 c-12">
             <div class="order">
                 <div class="order__avatar">
@@ -32,6 +32,10 @@
                     <span class="order__title">
                         Mã đơn hàng:
                         <strong>0093345</strong>
+                    </span>
+                    <span class="order__title">
+                        Phong cách:
+                        <strong>Chụp ảnh cổ trang</strong>
                     </span>
                     <span class="order__title">
                         Tổng giá trị:

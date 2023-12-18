@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <link rel="stylesheet" href="./base.css">
-    <link rel="stylesheet" href="./acceptorder.css">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./mainicon.css">
+    <link rel="stylesheet" href="./manageroder.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINDY</title>
+    <style>
+        .process::before {
+            content: "";
+            position: absolute;
+            width: 70%;
+            border: 2px solid #BFBDBC;
+            top: 30%;
+            left: 15%;
+            right: 15%;
+            transform: translateY(-50%);
+        }
+    </style>
 </head>
 
 <body>
     <!-- -----------chatbox------------ -->
     <?php
-    session_start();
+    include "id_tho.php";
+    ?>
 
-    // Kiểm tra xem người dùng đã đăng nhập chưa
-    if (!isset($_SESSION['id'])) {
-        header('Location: main.php'); // Chuyển hướng về trang đăng nhập nếu chưa đăng nhập
-        exit();
-    }
-
+    <?php
     // Lấy thông tin người dùng từ session
     $id = $_SESSION['id'];
     $username = $_SESSION['username'];
@@ -31,293 +39,47 @@
 
     ?>
 
-
     <?php
     include "headerphoto1.php";
     ?>
 
-
-    <?php
-    // Kiểm tra xem có dữ liệu được truyền qua URL hay không
-    if (isset($_GET['hoten']) && isset($_GET['diachi']) && isset($_GET['thoiGian']) && isset($_GET['kieu']) && isset($_GET['gia'])) {
-        // Retrieve the values from the query parameters
-        $hoten = $_GET['hoten'];
-        $diachi = $_GET['diachi'];
-        $thoiGian = $_GET['thoiGian'];
-        $gia = $_GET['gia'];
-        $kieu = $_GET['kieu'];
-        $marequest = $_GET['marequest'];
-
-        // Hiển thị thông tin chi tiết
-
-    } else {
-        echo 'Không có thông tin chi tiết.';
-    }
-    ?>
-    <section>
-        <div class="acceptoder">
+    <div class="container">
             <div class="grid wide">
-                <div class="acceptoder_header c-12 m-12 l-12">
-                    DANH SÁCH YÊU CẦU TỪ KHÁCH HÀNG
-                    <p>Mã request: <?php echo $marequest ?></p>
-                </div>
-                <div class="acceptoder_container">
-                    <div class="acceptoder_left">
-                        <div class="acceptoder_left-infor">
-                            Thông tin đơn hàng
-                        </div>
-                        <div class="acceptoder_left-items">
-                            <div class="acceptoder_left-items-name">
-                                <span>Họ và tên khách hàng: </span> <span><?php echo $hoten ?></span>
-                            </div>
-                            <div class="acceptoder_left-items-address">
-                                <span>Địa điểm: </span><span><?php echo $diachi ?></span>
-                            </div>
-                            <div class="acceptoder_left-items-form">
-                                <span>Hình thức: </span><span><?php echo $kieu ?></span>
-                            </div>
-                            <div class="acceptoder_left-items-date">
-                                <span>Ngày diễn ra: </span><span><?php echo $thoiGian ?></span>
-                            </div>
-                            <div class="acceptoder_left-items-price">
-                                <span>Giá: </span><span><?php echo $gia ?></span><span>đ</span>
-                            </div>
-                            <div class="acceptoder_left-items-style">
-                                <span>Phong cách: </span><span>Ngầu</span>
-                            </div>
-
-
-                        </div>
-                        <div class="acceptoder_left-price">
-                            <p>DỊCH VỤ CUNG CẤP</p>
-                            <div class="photomain">
-                                <div class="acceptoder_left-price-service">
-                                    <?php echo $kieu  ?>
-                                </div>
-                                <div class="acceptoder_left-price-style">
-                                    <?php echo $gia ?>
-                                </div>
-                            </div>
-                            <div class="makeupmain">
-                                <div class="acceptoder_left-price-service">
-                                    Make-up
-                                </div>
-                                <div class="acceptoder_left-price-style">
-                                    100000
-                                </div>
-                            </div>
-                            <div class="sum">
-                                <div class="acceptoder_left-price-sum-text">
-                                    Tổng giá trị
-                                </div>
-                                <div class="acceptoder_left-price-sum">
-
-                                </div>
-                            </div>
-                            <div class="acceptoder_left-items-button">
-                                <a href="./photomanageroder.php">Tạo đơn hàng</a>
+                <div class="content" style="padding-top: 36px;">
+                    <div class="row process">
+                        <div class="col l-4 m-4 c-4">
+                            <div class="process__group">
+                                <a href="./makeupconfirm.php" target="loadpage" class="process__step active">
+                                    <p class="process__number">1</p>
+                                    <p class="process__name">Xác nhận</p>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="acceptoder_right">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="chat-box">
-        <label for="chat-box-checkbox">
-            <i class="chat-box-icon fa-regular fa-comment-dots fa-flip-horizontal"></i>
-        </label>
-        <input type="checkbox" hidden id="chat-box-checkbox" class="chat-box__checkbox">
-
-        <div class="chat-box__container">
-            <div class="chat-box__header">
-                <span class="chat-box__heading">Chat</span>
-                <label for="chat-box-checkbox">
-                    <i class="chat-box__control-icon fa-solid fa-chevron-down"></i>
-                </label>
-            </div>
-
-            <div class="chat-box__body">
-                <div class="row">
-                    <div class="col l-4 m-4 c-0">
-                        <div class="conversation">
-                            <div class="conversation-item conversation-item--select">
-                                <img src="./img/avatar-1.png" alt="" class="conversation-item__avatar-img">
-                                <div class="conversation-item__info">
-                                    <p class="conversation-item__name">Trần Minh Khánh</p>
-                                    <p class="conversation-item__date">08/10/2023</p>
-                                    <p class="conversation-item__message">
-                                        Xin chào! Tôi có ứng tuyển vào bài đăng của bạn.
-                                    </p>
-                                </div>
+                        <div class="col l-4 m-4 c-4">
+                            <div class="process__group">
+                                <a href="./makeupperform.php"  target="loadpage" class="process__step">
+                                    <p class="process__number">2</p>
+                                    <p class="process__name">Thực hiện</p>
+                                </a>
                             </div>
-
-                            <div class="conversation-item">
-                                <img src="./img/avatar-2.png" alt="" class="conversation-item__avatar-img">
-                                <div class="conversation-item__info">
-                                    <p class="conversation-item__name">Trương Thị Thu Thảo</p>
-                                    <p class="conversation-item__date">08/10/2023</p>
-                                    <p class="conversation-item__message">
-                                        Xin chào! Tôi có ứng tuyển vào bài đăng của bạn.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="conversation-item">
-                                <img src="./img/avatar-6.png" alt="" class="conversation-item__avatar-img">
-                                <div class="conversation-item__info">
-                                    <p class="conversation-item__name">Hoàng Thị Diệu Linh</p>
-                                    <p class="conversation-item__date">08/10/2023</p>
-                                    <p class="conversation-item__message">
-                                        Xin chào! Tôi có ứng tuyển vào bài đăng của bạn.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="conversation-item">
-                                <img src="./img/avatar-3.png" alt="" class="conversation-item__avatar-img">
-                                <div class="conversation-item__info">
-                                    <p class="conversation-item__name">Nguyễn Văn Nam</p>
-                                    <p class="conversation-item__date">08/10/2023</p>
-                                    <p class="conversation-item__message">
-                                        Xin chào! Tôi có ứng tuyển vào bài đăng của bạn.
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="col l-4 m-4 c-4">
+                            <div class="process__group">
+                                <a href="./makeuppayment.php" target="loadpage" class="process__step">
+                                    <p class="process__number">3</p>
+                                    <p class="process__name">Đã được thanh toán</p>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col l-8 m-8 c-12">
-                        <div class="message">
-                            <div class="message__header">
-                                <img src="./img/avatar-1.png" alt="" class="message__avatar-img">
-                                <span class="message__name">Trần Minh Khánh</span>
-                            </div>
-                            <div class="message__detail">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <article>
+                        <iframe id="myiframe" src="./makeupconfirm.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;"></iframe>
+                    </article>
+                </div> 
             </div>
         </div>
     </div>
-    <!-- <section>
-        <div class="main">
-            
-            <div class="grid wide">
-                <div class="main_img">
-                    <video id="myVideo" autoplay >
-                        <source src="./video/Cinematic Camera Intro.mp4" type="video/mp4">
-                        Trình duyệt của bạn không hỗ trợ video HTML5.
-                      </video>
-                      <div class="buttom_voice">
-                        <button onclick="adjustVolume(-0.1)">Giảm âm lượng</button>
-                        <button onclick="adjustVolume(0.1)">Tăng âm lượng</button>
-                    </div> 
-                </div>
-                
-                <div class="main_mid row">
-                    <div class="main_left col c-8 m-8 l-8">
-                        <div class="main_left-img">
-                            
-                        </div>
-                    </div>
-                    <div class="main_right col c-4 m-4 l-4">
-
-                    </div>
-                </div>
-                <div class="main_bottom">
-                    <div class="main_bottom-container row">
-                        <div class="main_bottom-onepic col c-6 m-6 l-6">
-                            <img src="./video/a7db47168147165.Y3JvcCwxNjM4LDEyODEsMCw1Ng.webp" alt="">
-                        </div>
-                    
-                        <div class="main_bottom-fourpic col c-6 m-6 l-6">
-                            <div class="row">
-                                <div class="fourpic_top col c-12 m-12 l-12">
-                                    <div class="row">
-                                        <div class="fourpic_top-left  c-6 m-6 l-6">
-                                            <img src="./video/34730f178063661.Y3JvcCw0MjU5LDMzMzEsMCwxNTI4.webp" alt="">
-                                        </div>
-                                        <div class="fourpic_top-right  c-6 m-6 l-6">
-                                            <img src="./video/e47c4f174127615.Y3JvcCw1MTEzLDQwMDAsNTA2LDA.webp" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fourpic_bottom col c-12 m-12 l-12">
-                                    <div class="row">
-                                        <div class="fourpic_bottom-left  c-6 m-6 l-6">
-                                            <img src="./video/6e17cf173402337.Y3JvcCwzNjU2LDI4NTksMCwzMDc.webp" alt="">
-                                        </div>
-                                        <div class="fourpic_bottom-right  c-6 m-6 l-6">
-                                            <img src="./video/04477d173387439.Y3JvcCwxOTIwLDE1MDEsMCw2ODk.webp" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                        <div class="main_bottom-fourpic col c-6 m-6 l-6">
-                            <div class="row">
-                                <div class="fourpic_top col c-12 m-12 l-12">
-                                    <div class="row">
-                                        <div class="fourpic_top-left  c-6 m-6 l-6">
-                                            <img src="./video/09d1df150846019.63391d434f020.webp" alt="">
-                                        </div>
-                                        <div class="fourpic_top-right  c-6 m-6 l-6">
-                                            <img src="./video/bd1872176069037.Y3JvcCwxMDQzLDgxNiwxNzgsNDY.webp" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fourpic_bottom col c-12 m-12 l-12">
-                                    <div class="row">
-                                        <div class="fourpic_bottom-left  c-6 m-6 l-6">
-                                            <img src="./video/3a2a81177378365.Y3JvcCwxMDgwLDg0NCwwLDI1MQ.webp" alt="">
-                                        </div>
-                                        <div class="fourpic_bottom-right  c-6 m-6 l-6">
-                                            <img src="./video/153993129649549.Y3JvcCwzMDAwLDIzNDYsMCwzMDQ.webp" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main_bottom-onepic col c-6 m-6 l-6">
-                            <img src="./video/7d8df8165681079.Y3JvcCwxMDgwLDg0NCwwLDExNw.webp" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <section>
-        <div class="banner">
-            <div class="grid wide">
-                
-                    <div class="banner_img">
-                        <div class="banner_img-container">
-                            <div class="banner_img-img">
-                                <a href=""><img src="./img/banner1.jpg" alt=""></a>
-                                <a href=""><img src="./img/banner2.jpg" alt=""></a>
-                                <a href=""><img src="./img/banner3.jpg" alt=""></a>
-                                <a href=""><img src="./img/banner4.jpg" alt=""></a>
-                                <a href=""><img src="./img/banner5.jpg" alt=""></a>
-                            </div>
-                            <div class="button_banner">
-                                <i class="fa-solid fa-chevron-left"></i>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-    </section> -->
 
     <section>
         <div class="footer">
@@ -590,8 +352,9 @@
             </form>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./main.js"></script>
+    <script src="./coloroder.js"></script>
 </body>
 
 </html>

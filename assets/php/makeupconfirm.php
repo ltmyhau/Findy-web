@@ -45,9 +45,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Chờ xác nhận</button>
                 </div>
 
                 <a href="" class="order__detail">
@@ -90,9 +88,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Chờ xác nhận</button>
                 </div>
 
                 <a href="" class="order__detail">
@@ -135,9 +131,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Chờ xác nhận</button>
                 </div>
 
                 <a href="" class="order__detail">
@@ -180,9 +174,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Chờ xác nhận</button>
                 </div>
 
                 <a href="" class="order__detail">
@@ -225,9 +217,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Chờ xác nhận</button>
                 </div>
 
                 <a href="" class="order__detail">
@@ -270,9 +260,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Chờ xác nhận</button>
                 </div>
 
                 <a href="" class="order__detail">

@@ -15,6 +15,48 @@
         <div class="col l-12 m-12 c-12">
             <div class="order">
                 <div class="order__avatar">
+                    <img src="../img/avatar-1.png" alt="Ảnh đại diện" class="order__avatar-img">
+                </div>
+
+                <div class="order__info">
+                    <span class="order__name">
+                        Trần Minh Khánh
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-location-dot"></i>
+                        Quận 9, Hồ Chí Minh
+                    </span>
+                </div>
+
+                <div class="order__info">
+                    <span class="order__title">
+                        Mã đơn hàng:
+                        <strong>0093345</strong>
+                    </span>
+                    <span class="order__title">
+                        Phong cách:
+                        <strong>Chụp ảnh cổ trang</strong>
+                    </span>
+                    <span class="order__title">
+                        Tổng giá trị:
+                        <strong>1.790.000</strong>
+                    </span>
+                </div>
+
+                <div class="order__info">
+                    <button class="btn order-btn">Đã xong</button>
+                </div>
+
+                <a href="" class="order__detail">
+                    Xem chi tiết
+                    <i class="order__detail-icon fa-solid fa-right-long"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="col l-12 m-12 c-12">
+            <div class="order">
+                <div class="order__avatar">
                     <img src="./img/avatar1.jpg" alt="Ảnh đại diện" class="order__avatar-img">
                 </div>
 
@@ -45,9 +87,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Đã xong</button>
                 </div>
 
                 <a href="" class="order__detail">
@@ -90,9 +130,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Đã xong</button>
                 </div>
 
                 <a href="" class="order__detail">
@@ -135,9 +173,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Đã xong</button>
                 </div>
 
                 <a href="" class="order__detail">
@@ -180,99 +216,7 @@
                 </div>
 
                 <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
-                </div>
-
-                <a href="" class="order__detail">
-                    Xem chi tiết
-                    <i class="order__detail-icon fa-solid fa-right-long"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="col l-12 m-12 c-12">
-            <div class="order">
-                <div class="order__avatar">
-                    <img src="./img/avatar6.jpg" alt="Ảnh đại diện" class="order__avatar-img">
-                </div>
-
-                <div class="order__info">
-                    <span class="order__name">
-                        Nguyễn Bảo Hân
-                    </span>
-                    <span class="order__text">
-                        <i class="order__text-icon fa-solid fa-location-dot"></i>
-                        Quận 9, TP.Hồ Chí Minh
-                    </span>
-                </div>
-
-                <div class="order__info">
-                    <span class="order__title">
-                        Mã đơn hàng:
-                        <strong>0093348</strong>
-                    </span>
-                    <span class="order__title">
-                        Phong cách:
-                        <strong>Chụp ảnh hiện đại</strong>
-                    </span>
-                    <span class="order__title">
-                        Tổng giá trị:
-                        <strong>500.000</strong>
-                        <strong>đ</strong>
-                    </span>
-                </div>
-
-                <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
-                </div>
-
-                <a href="" class="order__detail">
-                    Xem chi tiết
-                    <i class="order__detail-icon fa-solid fa-right-long"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="col l-12 m-12 c-12">
-            <div class="order">
-                <div class="order__avatar">
-                    <img src="./img/avatar8.jpg" alt="Ảnh đại diện" class="order__avatar-img">
-                </div>
-
-                <div class="order__info">
-                    <span class="order__name">
-                        Bùi Thị Yến Nhi
-                    </span>
-                    <span class="order__text">
-                        <i class="order__text-icon fa-solid fa-location-dot"></i>
-                        Bình Dương
-                    </span>
-                </div>
-
-                <div class="order__info">
-                    <span class="order__title">
-                        Mã đơn hàng:
-                        <strong>0093350</strong>
-                    </span>
-                    <span class="order__title">
-                        Phong cách:
-                        <strong>Chụp ảnh giải bóng đá cấp thành</strong>
-                    </span>
-                    <span class="order__title">
-                        Tổng giá trị:
-                        <strong>2.000.000</strong>
-                        <strong>đ</strong>
-                    </span>
-                </div>
-
-                <div class="order__info">
-                    <span class="order__title">
-                        <em>Đơn đợi khách hàng thanh toán</em>
-                    </span>
+                    <button class="btn order-btn">Đã xong</button>
                 </div>
 
                 <a href="" class="order__detail">
